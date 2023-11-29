@@ -1,0 +1,16 @@
+.client_owl-carousel .box{
+  height: 350px;
+  max-width: 500px;
+}
+.owl-carousel{
+  display: flex;
+}
+.box-img{
+  width: 105px;
+}
+.client_section{
+  height: 500px;
+}
+.footer_section{
+  width: 100vw;
+}
