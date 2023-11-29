@@ -35,7 +35,7 @@ const Footer = () => {
                 Forge legendary tales with us on Unicorn Rust – where survival meets magic, and every player is part of the Rust family.
                 </p>
                 <div className="footer_social">
-                <a href="">
+                {/* <a href="">
                     <i className="fa fa-facebook" aria-hidden="true"></i>
                 </a>
                 <a href="">
@@ -49,7 +49,7 @@ const Footer = () => {
                 </a>
                 <a href="">
                     <i className="fa fa-pinterest" aria-hidden="true"></i>
-                </a>
+                </a> */}
                 </div>
             </div>
             </div>
