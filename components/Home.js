@@ -4,7 +4,7 @@ import Menu from './Home/Menu'
 import Info from './Home/Info'
 import Support from './Home/Support'
 import Saying from './Home/Saying'
-import Footer from './Home/Footer'
+import Footer from './Common/Footer'
 
 const Home = () => {
   return (
