@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { change } from '../Redux/category'
+
 const Mmid = () => {
-    const selectedcategory = useSelector((state) => state.SelectedCategory.value);
+  const storeItems = useSelector((state)=> state.shopData.value);
+  const selectedcategory = useSelector((state) => state.SelectedCategory.value);
   const dispatch = useDispatch();
-  const categories = [{name:'All',id:0},{name:'VIP Packages',id:1},{name:'Armour and Attire',id:2},{name:'Weapons and Ammunition',id:3},{name:'Construction and Tools',id:4}]
-  const storeItems = [{name:'Delicious Pizza',preview_description:'VIP',description:'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque',price:20,image:'f1.png',id:'3214abc',category:'All'}]
+  const categories = useSelector((state)=> state.Categories.value);
+//   const categories = [{name:'All',id:0},{name:'VIP Packages',id:1},{name:'Armour and Attire',id:2},{name:'Weapons and Ammunition',id:3},{name:'Construction and Tools',id:4}]
   return (
     <section className="food_section layout_padding-bottom">
         <div className="container">
