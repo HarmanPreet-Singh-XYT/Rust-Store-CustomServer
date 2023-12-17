@@ -23,7 +23,7 @@ const Navbar = () => {
                     <ul className="navbar-nav  mx-auto ">
                     {nav.map((each,index)=>
                         <li onClick={()=>dispatch(changeSelected(each))} key={index} className={selectedpanel===each ? "nav-item active" : "nav-item"}>
-                            <Link className="nav-link" href={each==='Home' ? '/' : each} passHref>{each} <span className="sr-only">{selectedpanel===each && '(current)'}</span></Link>
+                            <Link className="nav-link" href={each==='Home' ? '/' : `/${each}`} passHref>{each} <span className="sr-only">{selectedpanel===each && '(current)'}</span></Link>
                         </li>
                     )}
                     </ul>
