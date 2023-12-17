@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useSelector, useDispatch } from 'react-redux'
 import { changeSelected } from '../Redux/selectedpanel'
 const Navbar = () => {
-    const nav = ['Home','Menu','About','Support']
+    const nav = ['Home','Menu','About','Support','policy']
     const selectedpanel = useSelector((state) => state.SelectedPanel.value);
     const dispatch = useDispatch();
   return (

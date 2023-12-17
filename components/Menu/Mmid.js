@@ -27,7 +27,7 @@ const Mmid = () => {
                 return FilterLogic && (<div key={index} className="col-sm-6 col-lg-4 all items">
                 <div className="box">
                 <div>
-                    <div className="img-box">
+                    <div style={{backgroundColor:'white'}} className="img-box">
                     <img src={each.image} alt=""/>
                     </div>
                     <div className="detail-box">

@@ -20,3 +20,26 @@
   border-radius: 20px;
   opacity: 90%;
 }
+.footer_links{
+  display: flex;
+  flex-direction: column;
+}
+.policies {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+.policies:hover{
+  color: white;
+}
+.pol-btn{
+  text-align: center;
+}
+.pol-btn > button{
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+}

@@ -1,6 +1,9 @@
 import React from 'react'
-
+import Link from 'next/link'
+import { useDispatch } from 'react-redux'
+import { privacy, terms, refund } from '../Redux/sel_policy'
 const Footer = () => {
+    const dispatch = useDispatch();
   return (
     <footer className="footer_section">
         <div className="container">
@@ -28,17 +31,23 @@ const Footer = () => {
             </div>
             <div className="col-md-4 footer-col">
             <div className="footer_detail">
-                <a href="" className="footer-logo">
+                <a href="/" className="footer-logo">
                 Unicorn Rust
                 </a>
                 <p>
                 Forge legendary tales with us on Unicorn Rust – where survival meets magic, and every player is part of the Rust family.
                 </p>
-                <div className="footer_social">
+                <div className="footer_links">
+                <Link onClick={()=>dispatch(privacy())} className='policies' href="/policy/privacy&policy" passHref>
+                    Privacy Policy
+                </Link>
+                <Link onClick={()=>dispatch(terms())} className='policies' href="/policy/terms&conditions" passHref>
+                    Terms and Conditions
+                </Link>
+                <Link onClick={()=>dispatch(refund())} className='policies' href="/policy/refund&cancellation" passHref>
+                    Refund and Cancellation
+                </Link>
                 {/* <a href="">
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
                     <i className="fa fa-twitter" aria-hidden="true"></i>
                 </a>
                 <a href="">
