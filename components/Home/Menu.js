@@ -1,6 +1,10 @@
+"use client"
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { change } from '../Redux/category'
+import { changeSelected } from '../Redux/selectedpanel'
+import Link from 'next/link'
+import Payment from '../Payment'
 const Menu = () => {
   const selectedcategory = useSelector((state) => state.SelectedCategory.value);
   const storeItems = useSelector((state)=> state.shopData.value);
@@ -16,6 +20,7 @@ const Menu = () => {
   return (
     <>
     <section className="offer_section layout_padding-bottom">
+    <Payment/>
     <div className="offer_container">
       <div className="container ">
         <div className="row">
@@ -57,7 +62,7 @@ const Menu = () => {
       <div className="filters-content">
         <div className="row grid">
           {storeItems && storeItems.map((each,index)=>{
-            const FilterLogic = (selectedcategory==='All' || each.category===selectedcategory)
+            const FilterLogic = (selectedcategory==='All' || each.category===selectedcategory);
             return FilterLogic && (<div key={index} className="col-sm-6 col-lg-4 all items">
             <div className="box">
               <div>
@@ -85,10 +90,10 @@ const Menu = () => {
           </div>)})}
         </div>
       </div>
-      <div className="btn-box">
-        <a href="">
+      <div className="btn-box" onClick={()=>dispatch(changeSelected('Menu'))}>
+        <Link href="/Menu">
           View More
-        </a>
+        </Link>
       </div>
     </div>
   </section>

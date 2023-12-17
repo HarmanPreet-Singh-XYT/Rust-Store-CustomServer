@@ -5,13 +5,13 @@ export const counterSlice = createSlice({
     value: 'Home',
   },
   reducers: {
-    change: (state, action) => {
+    changeSelected: (state, action) => {
       state.value = action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { change } = counterSlice.actions
+export const { changeSelected } = counterSlice.actions
 
 export default counterSlice.reducer

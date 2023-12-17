@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useSelector, useDispatch } from 'react-redux'
-import { change } from '../Redux/selectedpanel'
+import { changeSelected } from '../Redux/selectedpanel'
 const Navbar = () => {
     const nav = ['Home','Menu','About','Support']
     const selectedpanel = useSelector((state) => state.SelectedPanel.value);
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav  mx-auto ">
                     {nav.map((each,index)=>
-                        <li onClick={()=>dispatch(change(each))} key={index} className={selectedpanel===each ? "nav-item active" : "nav-item"}>
+                        <li onClick={()=>dispatch(changeSelected(each))} key={index} className={selectedpanel===each ? "nav-item active" : "nav-item"}>
                             <Link className="nav-link" href={each==='Home' ? '/' : each} passHref>{each} <span className="sr-only">{selectedpanel===each && '(current)'}</span></Link>
                         </li>
                     )}
@@ -34,11 +34,11 @@ const Navbar = () => {
                     <a className="cart_link" href="#">
                     
                     </a>
-                    <form className="form-inline">
+                    {/* <form className="form-inline">
                         <button className="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                         <i className="fa fa-search" aria-hidden="true"></i>
                         </button>
-                    </form>
+                    </form> */}
                     <a href="https://discord.gg/uWC8kBj3cf" style={{backgroundColor:'#7289da'}} className="order_online">
                         Join Discord
                     </a>

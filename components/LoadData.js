@@ -24,7 +24,7 @@ const LoadData = () => {
     useEffect(() => {
       getData()
     }, [])
-    
+    return null;
 }
 
 export default LoadData
