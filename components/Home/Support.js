@@ -77,7 +77,7 @@ const Support = () => {
                     <input name='email' value={form.email} onChange={handleChange} type="email" className="form-control" placeholder="Your Email" />
                 </div>
                 <div>
-                    <textarea name='message' value={form.message} onChange={handleChange} cols="50" rows="5" placeholder="I have Issue regarding a Player"></textarea>
+                    <textarea name='message' value={form.message} onChange={handleChange} cols='35' rows='5' placeholder="I have Issue regarding a Player"></textarea>
                 </div>
                 <div className="btn_box">
                     <button disabled={loading}>
