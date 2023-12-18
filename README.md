@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rust Game Site
 
-## Getting Started
+![Rust Game Site](/public/buyicon.png)
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A Game Site specifically for Rust which allows user to purchase any items from site and get it ingame, Not only that but website also provides Server info and Contact Support option
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Check out the live demo [here](https://unicorn-rust.vercel.app/).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Table of Contents
+1.Purchase items from site and get it inGame\
+2.Support System\
+3.Policy Info\
+4.Information and Offers\
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+Used for payment of ingame items and other stuff like support and policy detail
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
+HTML\
+CSS\
+React\
+Redux Toolkit\
+NextJS\
+SASS\
+Node\
+Express\
+MongoDB - Mongoose
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
+Contributions are welcome! To contribute to this project, follow these steps:\
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Fork the repository.\
+Create a new branch for your feature or bug fix.\
+Commit your changes.\
+Push your changes to your fork.\
+Submit a pull request.\
+
+
+
+## EnvironmentVariables *Necessary
+FRONTEND_SERVER_ORIGIN=http://localhost:3000 \
+MONGODB_URI=mongodb+srv://xxxxxxxxxx@cluster0.tok9h6y.mongodb.net\
+NEXT_PUBLIC_BACKEND=http://127.0.0.1:3050\
+NEXT_PUBLIC_EMAIL=xxxxxxx@gmail.com\
+NEXT_PUBLIC_PUBLIC_KEY=xxxxxxxxxxxxxxxxx\
+NEXT_PUBLIC_SERVICE_ID=xxxxxxxxxxxxxxxx\
+NEXT_PUBLIC_TEMPLATE_ID=xxxxxxxxxxxxxxx\
+NEXT_PUBLIC_CONTACTEMAIL=xxxxxxxx@gmail.com\
+NEXT_PUBLIC_LOCALDATA='true' or 'false' [used for deciding if server would fetch data from backend or local file(data.js)]\
