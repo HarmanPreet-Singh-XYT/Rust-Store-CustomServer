@@ -47,7 +47,7 @@ Submit a pull request.
 ## EnvironmentVariables *Necessary
 FRONTEND_SERVER_ORIGIN=http://localhost:3000 \
 MONGODB_URI=mongodb+srv://xxxxxxxxxx@cluster0.tok9h6y.mongodb.net\
-NEXT_PUBLIC_BACKEND=http://127.0.0.1:3050\
+NEXT_PUBLIC_BACKEND=http://127.0.0.1:3050 \
 NEXT_PUBLIC_EMAIL=xxxxxxx@gmail.com\
 NEXT_PUBLIC_PUBLIC_KEY=xxxxxxxxxxxxxxxxx\
 NEXT_PUBLIC_SERVICE_ID=xxxxxxxxxxxxxxxx\
