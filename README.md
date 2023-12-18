@@ -4,7 +4,7 @@
 
 ## Description
 
-A Game Site specifically for Rust which allows user to purchase any items from site and get it ingame, Not only that but website also provides Server info and Contact Support option
+A Game Site specifically for Rust which allows user to purchase any items from site and get it ingame, Not only that but website also provides Server info and Contact Support option.
 
 ## Demo
 
@@ -14,11 +14,11 @@ Check out the live demo [here](https://unicorn-rust.vercel.app/).
 1.Purchase items from site and get it inGame\
 2.Support System\
 3.Policy Info\
-4.Information and Offers\
+4.Information and Offers
 
 ## Usage
 
-Used for payment of ingame items and other stuff like support and policy detail
+Used for payment of ingame items and other stuff like support and policy detail.
 
 
 ## Technologies Used
@@ -40,7 +40,7 @@ Fork the repository.\
 Create a new branch for your feature or bug fix.\
 Commit your changes.\
 Push your changes to your fork.\
-Submit a pull request.\
+Submit a pull request.
 
 
 
