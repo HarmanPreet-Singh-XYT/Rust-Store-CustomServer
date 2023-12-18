@@ -7,9 +7,11 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { updateCategories } from './Redux/categories'
 import { toFalse } from './Redux/loading'
+import { categories, entries, userPatterns, vipUpgrades } from '@/app/data'
 const LoadData = () => {
     const dispatch = useDispatch();
     const url = process.env.NEXT_PUBLIC_BACKEND
+    const ifLocal = process.env.NEXT_PUBLIC_LOCALDATA
     async function getData() {
         try {
             // Make a GET request to the backend API to set data
@@ -23,8 +25,15 @@ const LoadData = () => {
             console.error(error);
           }
     }
+    function localData(){
+      dispatch(updateAd(vipUpgrades));
+      dispatch(updateShop(entries));
+      dispatch(updateSaying(userPatterns));
+      dispatch(updateCategories(categories));
+      dispatch(toFalse());
+    }
     useEffect(() => {
-      getData()
+      ifLocal==='true' ? localData() : getData()
     }, [])
     return null;
 }
