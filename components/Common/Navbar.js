@@ -1,8 +1,10 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { useSelector, useDispatch } from 'react-redux'
 import { changeSelected } from '../Redux/selectedpanel'
 const Navbar = () => {
+    const [expand, setExpand] = useState(false)
     const nav = ['Home','Menu','About','Support','policy']
     const selectedpanel = useSelector((state) => state.SelectedPanel.value);
     const dispatch = useDispatch();
@@ -15,11 +17,11 @@ const Navbar = () => {
                     </span>
                 </a>
 
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button onClick={()=>setExpand(!expand)} className={expand ? "navbar-toggler" : "navbar-toggler collapsed"} type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={expand} aria-label="Toggle navigation">
                     <span className=""> </span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className={expand ? 'navbar-collapse collapse show' : 'navbar-collapse collapse'} id="navbarSupportedContent">
                     <ul className="navbar-nav  mx-auto ">
                     {nav.map((each,index)=>
                         <li onClick={()=>dispatch(changeSelected(each))} key={index} className={selectedpanel===each ? "nav-item active" : "nav-item"}>
