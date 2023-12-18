@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import Loading from '../Common/Loading';
 const Saying = () => {
     const sayings = useSelector((state) => state.sayingData.value);
     // const sayings = [
@@ -15,6 +16,7 @@ const Saying = () => {
             What Says Our Admins
             </h2>
         </div>
+        <Loading/>
         <div className="carousel-wrap row ">
             <div className="owl-carousel client_owl-carousel">
             {sayings.map((each,index)=><div key={index} className="item">

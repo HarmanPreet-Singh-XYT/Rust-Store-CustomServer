@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { change } from '../Redux/category'
+import Loading from '../Common/Loading';
 
 const Mmid = () => {
   const storeItems = useSelector((state)=> state.shopData.value);
@@ -19,9 +20,10 @@ const Mmid = () => {
         <ul className="filters_menu">
             {categories.map(each=><li className={each.name===selectedcategory ? 'active' : 'inactive'} key={each.id} onClick={()=>dispatch(change(each.name))}>{each.name}</li>)}
         </ul>
-
+        <Loading/>
         <div className="filters-content">
             <div className="row grid">
+                
             {storeItems.map((each,index)=>{
                 const FilterLogic = (selectedcategory==='All' || each.category===selectedcategory)
                 return FilterLogic && (<div key={index} className="col-sm-6 col-lg-4 all items">

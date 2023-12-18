@@ -7,6 +7,7 @@ import sayingData from './saying_data';
 import adData from './ad_data';
 import catData from './categories'
 import selpolicy from './sel_policy'
+import loader from './loading'
 export default configureStore({
   reducer: {
     TopCardData: top,
@@ -17,5 +18,6 @@ export default configureStore({
     adData: adData,
     Categories: catData,
     SelectedPolicy: selpolicy,
+    Loading: loader,
   },
 });

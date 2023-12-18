@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 import { privacy, terms, refund } from '../Redux/sel_policy'
+import { changeSelected } from '../Redux/selectedpanel'
 const Footer = () => {
     const dispatch = useDispatch();
   return (
@@ -20,12 +21,12 @@ const Footer = () => {
                     Discord
                     </span>
                 </a>
-                <a href="">
+                <p>
                     <i className="fa fa-envelope" aria-hidden="true"></i>
                     <span>
                     unicornrust@asia.com
                     </span>
-                </a>
+                </p>
                 </div>
             </div>
             </div>
@@ -38,13 +39,13 @@ const Footer = () => {
                 Forge legendary tales with us on Unicorn Rust – where survival meets magic, and every player is part of the Rust family.
                 </p>
                 <div className="footer_links">
-                <Link onClick={()=>dispatch(privacy())} className='policies' href="/policy/privacy&policy" passHref>
+                <Link onClick={()=>{dispatch(privacy());dispatch(changeSelected('policy'))}} className='policies' href="/policy/privacy&policy" passHref>
                     Privacy Policy
                 </Link>
-                <Link onClick={()=>dispatch(terms())} className='policies' href="/policy/terms&conditions" passHref>
+                <Link onClick={()=>{dispatch(terms());dispatch(changeSelected('policy'))}} className='policies' href="/policy/terms&conditions" passHref>
                     Terms and Conditions
                 </Link>
-                <Link onClick={()=>dispatch(refund())} className='policies' href="/policy/refund&cancellation" passHref>
+                <Link onClick={()=>{dispatch(refund());dispatch(changeSelected('policy'))}} className='policies' href="/policy/refund&cancellation" passHref>
                     Refund and Cancellation
                 </Link>
                 {/* <a href="">

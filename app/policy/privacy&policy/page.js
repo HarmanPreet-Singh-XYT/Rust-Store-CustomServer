@@ -5,16 +5,18 @@ import Footer from '@/components/Common/Footer';
 import Privacy from '@/components/Policies/Privacy';
 import React from 'react';
 import Navbar from '@/components/Common/Navbar';
+import Policies from '@/components/Policies';
 const page = () => {
   return (
     <Provider store={store}>
-    <header className="header_section">
+    {/* <header className="header_section">
     <Navbar/>
     </header>
     <div className="container">
     <Privacy/>
     </div>
-    <Footer/>
+    <Footer/> */}
+    <Policies type='privacy&policy'/>
     </Provider>
   )
 }

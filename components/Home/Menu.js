@@ -5,6 +5,7 @@ import { change } from '../Redux/category'
 import { changeSelected } from '../Redux/selectedpanel'
 import Link from 'next/link'
 import Payment from '../Payment'
+import Loading from '../Common/Loading'
 const Menu = () => {
   const selectedcategory = useSelector((state) => state.SelectedCategory.value);
   const storeItems = useSelector((state)=> state.shopData.value);
@@ -58,7 +59,7 @@ const Menu = () => {
       <ul className="filters_menu">
         {categories.map(each=><li className={each.name===selectedcategory ? 'active' : 'inactive'} key={each.id} onClick={()=>dispatch(change(each.name))}>{each.name}</li>)}
       </ul>
-
+      <Loading/>
       <div className="filters-content">
         <div className="row grid">
           {storeItems && storeItems.map((each,index)=>{

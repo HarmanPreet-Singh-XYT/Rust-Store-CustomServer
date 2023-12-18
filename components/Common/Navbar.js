@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="container">
                 <nav className="navbar navbar-expand-lg custom_nav-container ">
-                <a className="navbar-brand" href="index.html">
+                <a className="navbar-brand" href="/">
                     <span>
                     Unicorn Rust
                     </span>
