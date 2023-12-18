@@ -1,11 +1,10 @@
 import { Inter } from 'next/font/google'
-import './css/bootstrap.css'
-import './css/responsive.css'
-import './css/page.module.css'
+import './css/bootstrap.scss'
+import './css/responsive.scss'
+import './css/page.module.scss'
 import './css/style.css'
 import './css/style.scss'
-import './css/style.css'
-import './css/globals.css'
+import './css/globals.scss'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
