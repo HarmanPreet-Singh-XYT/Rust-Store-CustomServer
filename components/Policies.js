@@ -22,7 +22,7 @@ const Policies = (props) => {
     </header>
     <div className="container pol-btn">
       <button style={{backgroundColor:selectedpolicy==='privacy&policy' ? `#007bff` : `#0256b0`}} onClick={()=>dispatch(privacy())}>Privacy Policy</button>
-      <button style={{backgroundColor:selectedpolicy==='terms&conditions' ? `#007bff` : `#0256b0`}} onClick={()=>dispatch(terms())}>Terms and Conditions</button>
+      <button style={{backgroundColor:selectedpolicy==='terms&conditions' ? `#007bff` : `#0256b0`}} onClick={()=>dispatch(terms())}>Terms of Service</button>
       <button style={{backgroundColor:selectedpolicy==='refund&cancellation' ? `#007bff` : `#0256b0`}} onClick={()=>dispatch(refund())}>Refund and Cancellation</button>
     </div>
     <div className="container">

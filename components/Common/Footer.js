@@ -39,11 +39,11 @@ const Footer = () => {
                 Forge legendary tales with us on Unicorn Rust – where survival meets magic, and every player is part of the Rust family.
                 </p>
                 <div className="footer_links">
-                <Link onClick={()=>{dispatch(privacy());dispatch(changeSelected('policy'))}} className='policies' href="/policy/privacy&policy" passHref>
+                <Link onClick={()=>{dispatch(privacy());dispatch(changeSelected('policy'))}} className='policies' href="/policy/privacypolicy" passHref>
                     Privacy Policy
                 </Link>
-                <Link onClick={()=>{dispatch(terms());dispatch(changeSelected('policy'))}} className='policies' href="/policy/terms&conditions" passHref>
-                    Terms and Conditions
+                <Link onClick={()=>{dispatch(terms());dispatch(changeSelected('policy'))}} className='policies' href="/policy/termsofservice" passHref>
+                    Terms of Service
                 </Link>
                 <Link onClick={()=>{dispatch(refund());dispatch(changeSelected('policy'))}} className='policies' href="/policy/refund&cancellation" passHref>
                     Refund and Cancellation
