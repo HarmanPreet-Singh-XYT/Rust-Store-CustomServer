@@ -43,7 +43,7 @@ const Mmid = () => {
                         <h6>
                         ${each.price}
                         </h6>
-                        <a href="">
+                        <a href={each.buttonlink}>
                         <img height='40px' src='buyicon.png'/>
                         </a>
                     </div>

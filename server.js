@@ -32,6 +32,7 @@ const shopItems = new mongoose.Schema({
   image: String,
   id: Number,
   category: String,
+  buttonlink: String
 });
 const ads = new mongoose.Schema({
   title: String,
@@ -64,7 +65,7 @@ app.get('/',(req,res)=>{
 })
 app.post('/add-entry', async (req, res) => {
   try {
-    const { name, preview_description, description, price, image, id, category } = req.body;
+    const { name, preview_description, description, price, image, id, category, buttonlink } = req.body;
 
     // Create a new entry using the Mongoose model
     const newEntry = new Entry({
@@ -75,6 +76,7 @@ app.post('/add-entry', async (req, res) => {
       image,
       id,
       category,
+      buttonlink
     });
 
     // Save the entry to the database
